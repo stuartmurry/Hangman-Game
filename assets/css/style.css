@@ -1,0 +1,17 @@
+body {
+  padding-top: 5rem;
+}
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.letter {
+    font-size : 36px;
+    padding: 10px;
+}
+
+.hidden {
+  visibility: hidden;
+}
