@@ -18,7 +18,7 @@ $( document ).ready(function() {
         start : function() {
             $('#YouWinMessage').addClass('hidden');
             $("#HangmanMessage").addClass('hidden');
-            $("#GamePrompt").show();
+            $("#GamePrompt").removeClass('hidden');
             this.isDisabledKeys = false;
             this.missQueue = [];
             this.letterQueue = this.hangmanWord.toLowerCase().split('').map((c, i) => { return { val : c, index : i, isMatch : false}});
@@ -70,12 +70,12 @@ $( document ).ready(function() {
         },
         displayHangmanMessage : function() {
             $("#HangmanMessage").removeClass('hidden');
-            $("#GamePrompt").hide();
-            $('#YouWinMessage').hide();
+            $("#GamePrompt").addClass('hidden');
+            $('#YouWinMessage').addClass('hidden');
         },
         displayYouWonMessage : function() {
-            $("#HangmanMessage").hide();
-            $("#GamePrompt").hide();
+            $("#HangmanMessage").addClass('hidden');
+            $("#GamePrompt").addClass('hidden');
             $('#YouWinMessage').removeClass('hidden');
         }
     };
